@@ -3,13 +3,17 @@ import './ListItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ListArray = (props) => {
-  const { list, deleteItem } = props
+  const { list, completeTask, deleteTask } = props
   return (
-    list.map((item) => (
-      <div className="list" key={item.key}>
-        <p>{item.text}
+    list.map((task) => (
+      <div className="list" key={task.key}>
+        <p>Task: {task.task}, User: {task.user.name}
           <span>
-            <FontAwesomeIcon className="faicons" icon="trash" onClick={() => deleteItem(item.key)}/>
+            {
+              ((task.isCompleted === false) ?
+                <FontAwesomeIcon className="faicons" icon="check-circle" onClick={() => completeTask(task.key)}/> : null)
+            }
+            <FontAwesomeIcon className="faicons" icon="trash" onClick={() => deleteTask(task.key)}/>
           </span>
         </p>
       </div>
