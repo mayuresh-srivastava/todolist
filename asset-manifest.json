@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/todolist/static/css/main.b1dac998.chunk.css",
-    "main.js": "/todolist/static/js/main.88075726.chunk.js",
-    "main.js.map": "/todolist/static/js/main.88075726.chunk.js.map",
+    "main.css": "/todolist/static/css/main.f58aba46.chunk.css",
+    "main.js": "/todolist/static/js/main.a50671e0.chunk.js",
+    "main.js.map": "/todolist/static/js/main.a50671e0.chunk.js.map",
     "runtime-main.js": "/todolist/static/js/runtime-main.3b399638.js",
     "runtime-main.js.map": "/todolist/static/js/runtime-main.3b399638.js.map",
     "static/css/2.1a02f21c.chunk.css": "/todolist/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.ab442173.chunk.js": "/todolist/static/js/2.ab442173.chunk.js",
-    "static/js/2.ab442173.chunk.js.map": "/todolist/static/js/2.ab442173.chunk.js.map",
+    "static/js/2.9c5ae742.chunk.js": "/todolist/static/js/2.9c5ae742.chunk.js",
+    "static/js/2.9c5ae742.chunk.js.map": "/todolist/static/js/2.9c5ae742.chunk.js.map",
     "static/js/3.8c13aa4d.chunk.js": "/todolist/static/js/3.8c13aa4d.chunk.js",
     "static/js/3.8c13aa4d.chunk.js.map": "/todolist/static/js/3.8c13aa4d.chunk.js.map",
     "index.html": "/todolist/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/todolist/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.b1dac998.chunk.css.map": "/todolist/static/css/main.b1dac998.chunk.css.map",
-    "static/js/2.ab442173.chunk.js.LICENSE.txt": "/todolist/static/js/2.ab442173.chunk.js.LICENSE.txt"
+    "static/css/main.f58aba46.chunk.css.map": "/todolist/static/css/main.f58aba46.chunk.css.map",
+    "static/js/2.9c5ae742.chunk.js.LICENSE.txt": "/todolist/static/js/2.9c5ae742.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b399638.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.ab442173.chunk.js",
-    "static/css/main.b1dac998.chunk.css",
-    "static/js/main.88075726.chunk.js"
+    "static/js/2.9c5ae742.chunk.js",
+    "static/css/main.f58aba46.chunk.css",
+    "static/js/main.a50671e0.chunk.js"
   ]
 }
