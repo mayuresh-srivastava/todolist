@@ -20,10 +20,6 @@ export default class Login extends Component {
     this.setState({ input });
   }
 
-  validateForm = () => {
-    // return email.length > 0 && password.length > 0;
-  }
-
   isAuthenticated() {
     const loggedIn = JSON.parse(localStorage.getItem("isAuthenticated"));
     if (loggedIn) {
@@ -50,7 +46,6 @@ export default class Login extends Component {
     const loginFormProps = {
       credentails: this.state,
       handleInput: this.handleInput,
-      validateForm: this.validateForm,
       handleSubmit: this.handleSubmit
     }
 

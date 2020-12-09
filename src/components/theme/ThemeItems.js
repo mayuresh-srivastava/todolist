@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ThemeItems = (props) => {
   const { theme, handleChange } = props
@@ -8,20 +8,22 @@ const ThemeItems = (props) => {
         <input
           type="radio"
           value="dark"
+          name="theme"
           checked={theme === true}
           onChange={handleChange}
         />
         Dark
-      </label>&nbsp;
+      </label>&nbsp;&nbsp;
 
       <label>
         <input
           type="radio"
-          value="blue"
+          value="light"
+          name="theme"
           checked={theme === false}
           onChange={handleChange}
         />
-        Blue
+        Light
       </label>
     </form>
   );

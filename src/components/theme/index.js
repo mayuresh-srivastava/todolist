@@ -1,22 +1,26 @@
-import { Component } from 'react';
-import ThemeItems from './ThemeItems';
+import { Component } from "react";
+import ThemeItems from "./ThemeItems";
 
 export default class Theme extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      theme: true
+      theme: false
     };
   }
 
   componentDidMount() {
     const theme = JSON.parse(localStorage.getItem("theme"));
-    this.setState({ theme });
+    if (theme) {
+      this.setState({ theme });
+    } else {
+      localStorage.setItem("theme", JSON.stringify(this.state.theme));
+    }
   }
 
   componentDidUpdate() {
-    localStorage.setItem("theme", this.state.theme);
+    localStorage.setItem("theme", JSON.stringify(this.state.theme));
   }
 
   toggleTheme = () => {
@@ -35,7 +39,7 @@ export default class Theme extends Component {
       }
     } else if(this.state.theme === false){
       bgStyle={
-        backgroundColor: "blue",
+        backgroundColor: "white",
       }
     }
 

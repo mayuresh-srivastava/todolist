@@ -3,14 +3,17 @@ import { Component } from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// Components
+
 import Root from "./Root";
 import Navigation from "./Nav";
 import Login from './components/auth/Login';
 import Admin from './components/admin/Admin';
-import Theme from './Theme';
-import Todo from './Todo';
+import Theme from './components/theme';
+import Todo from './components/todo';
 import Logout from './components/auth/Logout';
-import User from './components/user/User';
+import User from './components/user';
 
 export default class App extends Component {
   constructor() {
@@ -28,25 +31,9 @@ export default class App extends Component {
 
   render () {
     return (
-      /*<div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>*/
       <Router>
         <div className="App">
-          <Navigation handleLogout={this.handleLogout}/>
+          <Navigation />
 
           <div className="auth-wrapper">
             <div className="auth-inner">

@@ -1,10 +1,10 @@
 import React from 'react'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "../../Login.css";
+import "./Login.css";
 
 const LoginForm = (props) => {
-  const { credentails, handleInput, validateForm, handleSubmit  } = props.loginFormProps
+  const { credentails, handleInput, handleSubmit  } = props.loginFormProps
 
   return (
     <div className="Login">

@@ -1,29 +1,23 @@
 import { Component } from 'react';
-import UserList from './UserList';
+import UserList from './viewComponents/UserList';
 
 export default class User extends Component {
-  constructor() {
-    super();
-    this.state = {
-      users: []
-    }
-  }
 
   componentDidMount() {
     const users = localStorage.getItem("users");
     if ( users ){
-      this.setState({ users: JSON.parse(users) });
+      this.props.setUsers({ users: JSON.parse(users) });
     } else {
-      localStorage.setItem("users", JSON.stringify(this.state.users));
+      localStorage.setItem("users", JSON.stringify(this.props.users));
     }
   }
 
   componentDidUpdate() {
-    localStorage.setItem("users", JSON.stringify(this.state.users));
+    localStorage.setItem("users", JSON.stringify(this.props.users));
   }
 
   render() {
-    const { users } = this.state;
+    const { users } = this.props;
 
     return (
       <div className="Todo">
