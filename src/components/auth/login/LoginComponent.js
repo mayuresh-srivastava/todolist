@@ -1,23 +1,12 @@
 import { Component } from "react";
-import LoginForm from "./LoginForm";
+import LoginForm from "./viewComponents/LoginForm";
 import { Redirect } from "react-router-dom";
 
 export default class Login extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      input: {
-        username: "",
-        password: ""
-      }
-    }
-  }
-
   handleInput = (event) => {
-    const input = this.state.input;
+    const input = this.props.input;
     input[event.target.name] = event.target.value;
-    this.setState({ input });
+    this.props.handleInput({ input });
   }
 
   isAuthenticated() {
@@ -28,8 +17,8 @@ export default class Login extends Component {
   }
 
   handleSubmit = (event) => {
-    const username = this.state.input.username
-    const password = this.state.input.password
+    const username = this.props.input.username
+    const password = this.props.input.password
     event.preventDefault();
 
     if ((username === 'admin') && (password === 'icreon')) {
@@ -44,7 +33,7 @@ export default class Login extends Component {
   render () {
     const isAlereadyAuthenticated = this.isAuthenticated();
     const loginFormProps = {
-      credentails: this.state,
+      credentails: this.props,
       handleInput: this.handleInput,
       handleSubmit: this.handleSubmit
     }

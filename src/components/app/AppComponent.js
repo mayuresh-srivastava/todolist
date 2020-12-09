@@ -1,32 +1,24 @@
 // import logo from './logo.svg';
 import { Component } from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
 
-import Root from "./Root";
-import Navigation from "./Nav";
-import Login from './components/auth/Login';
-import Admin from './components/admin/Admin';
-import Theme from './components/theme';
-import Todo from './components/todo';
-import Logout from './components/auth/Logout';
-import User from './components/user';
+import Root from "../../Root";
+import Navigation from "../../Nav";
+import Login from "../auth/login";
+import Admin from "../admin/Admin";
+import Theme from "../theme";
+import Todo from "../todo";
+import Logout from "../auth/Logout";
+import User from "../user";
 
 export default class App extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      loggedIn: false
-    }
-  }
-
   handleAuth = () => {
     const loggedIn = JSON.parse(localStorage.getItem("isAuthenticated"));
-    this.setState({ loggedIn });
+    this.props.handleAuth({ loggedIn });
   }
 
   render () {

@@ -2,8 +2,8 @@
 
 const INITIAL_STATE = {
   input: {
-    username: '',
-    task: ''
+    username: "",
+    task: ""
   },
   users: [],
   tasks: []

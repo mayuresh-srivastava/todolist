@@ -3,7 +3,6 @@ import InputItem from "./viewComponents/Input";
 import ListArray from "./viewComponents/ListItem";
 import './Todo.css';
 import { Redirect } from "react-router-dom";
-// import Login from "./components/auth/Login"
 
 export default class Todo extends Component {
   isAuthenticated() {
