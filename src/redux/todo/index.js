@@ -32,14 +32,14 @@ const todoReducer = (state = INITIAL_STATE, action) => {
     case "COMPLETE_TASK":{
       return {
         ...state,
-        tasks: action.payload.tasks
+        tasks: action.payload
       }
     }
 
     case "DELETE_TASK":{
       return {
         ...state,
-        tasks: action.payload.tasks
+        tasks: action.payload
       }
     }
 

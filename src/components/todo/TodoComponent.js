@@ -74,15 +74,13 @@ export default class Todo extends Component {
 
   completeTask = (key) => {
     const { tasks } = this.props;
-    tasks.map((task) => ((task.key === key) ? (task.isCompleted = true) : task))
-    this.props.completeTask({ tasks });
+    const completedTasks = tasks.map(({isCompleted, ...task }) => ({ ...task, isCompleted: task.key === key ? true : false }));
+    this.props.completeTask(completedTasks);
   }
 
   deleteTask = (key) => {
     const filteredTasks = this.props.tasks.filter(task => task.key !== key);
-    this.props.deleteTask({
-      tasks: filteredTasks
-    })
+    this.props.deleteTask(filteredTasks);
   }
 
   render() {

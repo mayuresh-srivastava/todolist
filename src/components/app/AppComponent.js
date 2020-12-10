@@ -18,7 +18,7 @@ import User from "../user";
 export default class App extends Component {
   handleAuth = () => {
     const loggedIn = JSON.parse(localStorage.getItem("isAuthenticated"));
-    this.props.handleAuth({ loggedIn });
+    this.props.handleAuth(loggedIn);
   }
 
   render () {

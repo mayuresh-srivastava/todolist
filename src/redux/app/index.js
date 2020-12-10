@@ -7,7 +7,7 @@ const appReducer = (state = INITIAL_STATE, action) => {
     case "HANDLE_AUTH": {
       return {
         ...state,
-        loggedIn: action.payload.loggedIn
+        loggedIn: action.payload
       }
     }
 
