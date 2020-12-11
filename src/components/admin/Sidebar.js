@@ -11,6 +11,9 @@ const Sidebar = () => {
       <a className="menu-item" href="/users">
         User
       </a>
+      <a className="menu-item" href="/posts">
+        Post
+      </a>
     </Menu>
   );
 }

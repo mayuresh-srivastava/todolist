@@ -6,7 +6,7 @@ export default class User extends Component {
   componentDidMount() {
     const users = localStorage.getItem("users");
     if ( users ){
-      this.props.setUsers({ users: JSON.parse(users) });
+      this.props.setUsers(JSON.parse(users));
     } else {
       localStorage.setItem("users", JSON.stringify(this.props.users));
     }
