@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Root from "../../Root";
 import Navigation from "../../Nav";
 import Login from "../auth/login";
+import Register from "../auth/register";
 import Admin from "../admin/Admin";
 import Theme from "../theme";
 import Todo from "../todo";
@@ -33,6 +34,7 @@ export default class App extends Component {
               <Switch>
                 <Route exact path="/" component={Root} />
                 <Route path="/login" component={(props) => (<Login {...props} handleAuth={this.handleAuth} />)} />
+                <Route path="/register" component={Register} />
                 <Route path="/admin" component={Admin} />
                 <Route path="/theme" component={Theme} />
                 <Route path="/todo" component={Todo} />

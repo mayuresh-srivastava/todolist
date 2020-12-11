@@ -26,7 +26,10 @@ function Navigation(props) {
                     <Link to="/logout" className="nav-link">Logout</Link>
                   </li>
                 </> :
-                <Link to="/login" className="nav-link">Login</Link>
+                <>
+                  <Link to="/login" className="nav-link">Login</Link>
+                  <Link to="/register" className="nav-link">Register</Link>
+                </>
               }
           </ul>
         </div>
