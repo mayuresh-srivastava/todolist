@@ -9,10 +9,13 @@ const Sidebar = () => {
         Home
       </a>
       <a className="menu-item" href="/users">
-        User
+        Users
       </a>
       <a className="menu-item" href="/posts">
-        Post
+        Posts
+      </a>
+      <a className="menu-item" href="/items">
+        Items
       </a>
     </Menu>
   );

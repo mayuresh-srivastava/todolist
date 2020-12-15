@@ -16,6 +16,8 @@ import Todo from "../todo";
 import Logout from "../auth/Logout";
 import User from "../user";
 import Post from "../post";
+import Item from "../item";
+import ItemDetail from "../item/ItemDetail";
 
 export default class App extends Component {
   handleAuth = () => {
@@ -40,6 +42,8 @@ export default class App extends Component {
                 <Route path="/todo" component={Todo} />
                 <Route path="/users" component={User} />
                 <Route path="/posts" component={Post} />
+                <Route exact path="/items" component={Item} />
+                <Route path="/items/:id" component={ItemDetail} />
                 <Route path="/logout" component={(props) => (<Logout {...props} handleAuth={this.handleAuth} />)} />
               </Switch>
             </div>

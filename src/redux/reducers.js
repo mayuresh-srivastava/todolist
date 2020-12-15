@@ -1,18 +1,23 @@
 import { combineReducers } from "redux";
-import todoReducer from "./todo";
-import userReducer from "./user";
+
+// reducers
+
+import registerReducer from "./register";
 import loginReducer from "./login";
 import appReducer from "./app";
+import todoReducer from "./todo";
+import userReducer from "./user";
 import postReducer from "./post";
-import registerReducer from "./register";
+import itemReducer from "./item";
 
 const allReducer = combineReducers({
-  todo: todoReducer,
-  user: userReducer,
+  register: registerReducer,
   login: loginReducer,
   app: appReducer,
+  todo: todoReducer,
+  user: userReducer,
   post: postReducer,
-  register: registerReducer
+  item: itemReducer
 });
 
 export default allReducer;
